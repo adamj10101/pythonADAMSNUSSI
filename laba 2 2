@@ -1,0 +1,14 @@
+from collections import Counter
+
+text = input("Введите текст: ")
+
+text_no_spaces = text.replace(" ", "")
+
+
+k = Counter(text_no_spaces)
+
+top_3 = k.most_common(3)
+
+print("Топ 3 символа:")
+for char, count in top_3:
+    print(f"'{char}' — {count} раз(а)")
