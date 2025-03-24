@@ -1,0 +1,11 @@
+list1 = list(map(int, input("Введите первый список чисел через пробел: ").split()))
+list2 = list(map(int, input("Введите второй список чисел через пробел: ").split()))
+
+common_numbers = set(list1) & set(list2)
+k = len(common_numbers)
+
+if k == 0:
+    print("Нет общих чисел!")
+else:
+    print(f"Количество общих чисел: {k}")
+    print(f"Сами числа: {common_numbers}")
