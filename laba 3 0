@@ -1,0 +1,6 @@
+input_str = input("Введите числа через пробел: ")
+numbers = list(map(int, input_str.split()))
+
+result = [numbers[i] for i in range(1, len(numbers)) if numbers[i] > numbers[i-1]]
+
+print("Элементы, которые больше предыдущего:", result)
