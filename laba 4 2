@@ -1,0 +1,10 @@
+my_dict = eval(input("Введите словарь: "))
+
+search_value = input("Введите значение для поиска: ").strip("'\"")
+
+found_keys = [k for k, v in my_dict.items() if str(v) == search_value]
+
+if found_keys:
+    print(f"Ключ(и) для значения '{search_value}': {', '.join(map(str, found_keys))}")
+else:
+    print(f"Значение '{search_value}' не найдено в словаре")
