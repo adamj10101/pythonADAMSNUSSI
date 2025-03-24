@@ -1,0 +1,17 @@
+from collections import Counter
+
+def get_top_three_numbers():
+    input_string = input("Введите строку с цифрами: ")
+
+    digits = [int(char) for char in input_string if char.isdigit()]
+
+    digit_counts = Counter(digits)
+
+    top_three = dict(digit_counts.most_common(3))
+
+    return top_three
+
+result = get_top_three_numbers()
+print("Три самые частые цифры и их количество:")
+for digit, count in result.items():
+    print(f"Цифра {digit}: {count} раз(а)")
