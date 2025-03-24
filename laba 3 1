@@ -1,0 +1,10 @@
+input_str = input("Введите числа через пробел: ")
+numbers = list(map(int, input_str.split()))
+
+if numbers:
+    min_idx = numbers.index(min(numbers))
+    max_idx = numbers.index(max(numbers))
+    numbers[min_idx], numbers[max_idx] = max(numbers), min(numbers)
+    print("Результат:", numbers)
+else:
+    print("Список пустой!")
