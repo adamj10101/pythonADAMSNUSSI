@@ -1,0 +1,7 @@
+import ast
+
+dict_str = input("Введите словарь: ")
+my_dict = ast.literal_eval(dict_str)
+
+key = input("Введите ключ для поиска: ")
+print(my_dict.get(key))
