@@ -1,0 +1,13 @@
+strings = input().split()
+count = {}
+
+for s in strings:
+    if s in count:
+        count[s] += 1
+    else:
+        count[s] = 1
+
+for s in strings:
+    if s in count:
+        print(count[s], end=' ')
+        del count[s]
